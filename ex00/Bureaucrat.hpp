@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/17 13:30:53 by ahajji            #+#    #+#             */
-/*   Updated: 2024/01/22 15:11:47 by ahajji           ###   ########.fr       */
+/*   Created: 2024/01/22 15:17:08 by ahajji            #+#    #+#             */
+/*   Updated: 2024/01/22 17:27:34 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
-int main(void)
+class Bureaucrat
 {
-    
-    return 0;
-}
+    protected:
+        const std::string name;
+        int grade;
+    public:
+        std::string getName();
+        int getGarde();
+};
