@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
+/*   By: ahajji <ahajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:17:11 by ahajji            #+#    #+#             */
-/*   Updated: 2024/01/25 15:48:34 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/01/25 19:47:25 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,18 @@ Bureaucrat::Bureaucrat(std::string &name, int garde)
         throw std::string("Grade is out of range");
     else
         this->grade = garde;
+}
+
+Bureaucrat::~Bureaucrat()
+{
+}
+
+const std::string Bureaucrat::getName() const
+{
+    return this->name;
+}
+
+const int Bureaucrat::getGarde() const
+{
+    return this->grade;
 }
