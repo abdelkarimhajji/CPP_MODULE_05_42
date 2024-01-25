@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:17:11 by ahajji            #+#    #+#             */
-/*   Updated: 2024/01/26 23:47:39 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/01/27 00:10:41 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ const std::string Bureaucrat::getName() const
     return this->name;
 }
 
-const int Bureaucrat::getGarde() const
+const int Bureaucrat::getGrade() const
 {
     return this->grade;
 }
@@ -47,10 +47,16 @@ void    Bureaucrat::incrementGrade()
     else
     this->grade--;
 }
-Bureaucrat& operator=(const Bureaucrat &b) 
+Bureaucrat &Bureaucrat::operator=(const Bureaucrat &src)
 {
-    
+	std::cout << "Bureaucrat Assignation operator called" << std::endl;
+	if (this == &src)
+		return *this;
+
+	this->grade = src.getGrade();
+	return *this;
 }
+
 
 void Bureaucrat::decrementGrade()
 {
@@ -70,5 +76,5 @@ const char* Bureaucrat::GradeTooHighException::what() const throw()
 
 std::ostream& operator<<(std::ostream &os, const Bureaucrat &b)
 {
-    return os << b.getName() << ", bureaucrat grade " << b.getGarde() << std::endl;
+    return os << b.getName() << ", bureaucrat grade " << b.getGrade() << std::endl;
 }
