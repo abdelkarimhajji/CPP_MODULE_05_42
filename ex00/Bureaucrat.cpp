@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:17:11 by ahajji            #+#    #+#             */
-/*   Updated: 2024/01/25 21:01:41 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/01/26 21:50:45 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,12 @@ void Bureaucrat::decrementGrade()
         throw std::string("Grade to low");
     else
         this->grade++;
+}
+const char* Bureaucrat::GradeTooLowException::what() const throw(){
+    return "Grade so low";
+}
+
+const char* Bureaucrat::GradeTooHighException::what() const throw()
+{
+    return "Grade so High";
 }
