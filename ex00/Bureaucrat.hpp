@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
+/*   By: ahajji <ahajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:17:08 by ahajji            #+#    #+#             */
-/*   Updated: 2024/01/26 21:48:13 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/01/26 23:20:40 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,7 @@ class Bureaucrat
         {
             public:
                 const char* what() const throw();
-        };
+        };   
 };
+
+std::ostream& operator<<(std::ostream &os, const Bureaucrat &b);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
+/*   By: ahajji <ahajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:17:11 by ahajji            #+#    #+#             */
-/*   Updated: 2024/01/26 21:50:45 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/01/26 23:21:01 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,9 @@ const char* Bureaucrat::GradeTooLowException::what() const throw(){
 const char* Bureaucrat::GradeTooHighException::what() const throw()
 {
     return "Grade so High";
+}
+
+std::ostream& operator<<(std::ostream &os, const Bureaucrat &b)
+{
+    return os << b.getName() << ", bureaucrat grade " << b.getGarde() << std::endl;
 }
