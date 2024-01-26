@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:17:11 by ahajji            #+#    #+#             */
-/*   Updated: 2024/01/27 00:10:41 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/01/27 00:17:31 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,15 +47,12 @@ void    Bureaucrat::incrementGrade()
     else
     this->grade--;
 }
-Bureaucrat &Bureaucrat::operator=(const Bureaucrat &src)
+Bureaucrat& Bureaucrat::operator=(const Bureaucrat &b)
 {
-	std::cout << "Bureaucrat Assignation operator called" << std::endl;
-	if (this == &src)
-		return *this;
-
-	this->grade = src.getGrade();
-	return *this;
+    this->grade = b.getGrade();
+    return *this;
 }
+
 
 
 void Bureaucrat::decrementGrade()
