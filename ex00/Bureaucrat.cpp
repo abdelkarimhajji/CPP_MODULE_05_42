@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:17:11 by ahajji            #+#    #+#             */
-/*   Updated: 2024/01/26 23:21:01 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/01/26 23:47:39 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,22 @@ const int Bureaucrat::getGarde() const
     return this->grade;
 }
 
+Bureaucrat::Bureaucrat(const Bureaucrat &b) : name(b.name), grade(b.grade)
+{
+    
+}
+
+
 void    Bureaucrat::incrementGrade()
 {
     if(grade <= 1)
         throw std::string("Grade too hight");
     else
     this->grade--;
+}
+Bureaucrat& operator=(const Bureaucrat &b) 
+{
+    
 }
 
 void Bureaucrat::decrementGrade()
