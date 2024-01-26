@@ -6,18 +6,20 @@
 /*   By: ahajji <ahajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:17:11 by ahajji            #+#    #+#             */
-/*   Updated: 2024/01/27 00:17:31 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/01/27 00:37:21 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat(std::string &name, int garde)
+Bureaucrat::Bureaucrat(std::string name, int grade)
 {
-    if(grade > 150 || grade < 1) 
-        throw std::string("Grade is out of range");
+    if(grade > 150) 
+        throw GradeTooLowException();
+    else if(grade < 1)
+        throw GradeTooHighException();
     else
-        this->grade = garde;
+        this->grade = grade;
 }
 
 Bureaucrat::~Bureaucrat()
@@ -43,7 +45,7 @@ Bureaucrat::Bureaucrat(const Bureaucrat &b) : name(b.name), grade(b.grade)
 void    Bureaucrat::incrementGrade()
 {
     if(grade <= 1)
-        throw std::string("Grade too hight");
+        throw GradeTooHighException();
     else
     this->grade--;
 }
@@ -58,7 +60,7 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat &b)
 void Bureaucrat::decrementGrade()
 {
     if(grade >= 150)
-        throw std::string("Grade to low");
+        throw GradeTooLowException();
     else
         this->grade++;
 }
