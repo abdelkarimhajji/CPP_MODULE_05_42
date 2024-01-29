@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 20:52:03 by ahajji            #+#    #+#             */
-/*   Updated: 2024/01/29 21:37:31 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/01/29 21:51:20 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,19 @@ class Form
 
         void    beSigned(Bureaucrat& burcrat);
         
-        
+        class GradeTooHighException : public std::exception
+        {
+            public:
+                const char* what() const throw() {
+                    return "Grade is too high";
+                }
+        };
+
+        class  GradeTooLowException : public std::exception
+        {
+            public:
+                const char* what() const throw() {
+                    return "Grade is too low";
+                }
+        };
 };
