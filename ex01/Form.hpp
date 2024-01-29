@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 20:52:03 by ahajji            #+#    #+#             */
-/*   Updated: 2024/01/29 15:22:26 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/01/29 20:54:03 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,10 @@ class Form
     public:
         Form();
         ~Form();
+        
+        std::string getName() const;
+        bool    getSignedStatus() const;
+        int getGradeRequiredToSign() const;
+        int getGradeRequiredToSign() const;
+        
 };
