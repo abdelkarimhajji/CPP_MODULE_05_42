@@ -6,19 +6,19 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 20:52:03 by ahajji            #+#    #+#             */
-/*   Updated: 2024/01/29 21:51:20 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/02/08 13:15:57 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-class Form
+class Form 
 {
     private:
         const std::string name;
         bool    signedStatus;
-        const int  gardeRequiredToSign;
-        const int  gardeRequiredToExecute;
+        const int  gradeRequiredToSign;
+        const int  gradeRequiredToExecute;
     public:
         Form();
         ~Form();
@@ -26,7 +26,7 @@ class Form
         std::string getName() const;
         bool    getSignedStatus() const;
         int getGradeRequiredToSign() const;
-        int getGradeRequiredToSign() const;
+        int getGradeRequiredToExecute() const;
 
         void    beSigned(Bureaucrat& burcrat);
         
