@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahajji <ahajji@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:17:11 by ahajji            #+#    #+#             */
-/*   Updated: 2024/01/27 00:37:21 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/02/09 21:56:41 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,10 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat &b)
 {
     this->grade = b.getGrade();
     return *this;
+}
+void    signForm(Form& form)
+{
+    
 }
 
 
