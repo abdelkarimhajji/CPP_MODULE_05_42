@@ -6,11 +6,12 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:17:08 by ahajji            #+#    #+#             */
-/*   Updated: 2024/02/09 21:53:57 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/02/09 21:55:58 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include "Form.hpp"
 
 class Bureaucrat
 {
