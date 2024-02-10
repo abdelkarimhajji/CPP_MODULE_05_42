@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:17:11 by ahajji            #+#    #+#             */
-/*   Updated: 2024/02/09 21:57:50 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/02/10 10:16:16 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,5 +79,8 @@ std::ostream& operator<<(std::ostream &os, const Bureaucrat &b)
 
 void    Bureaucrat::signForm(Form& form)
 {
-    
+    if(form->signedStatus)
+        std::cout << this->name << " signed " << form->name;
+    else
+        std::cout << this->name << " couldn’t sign " << form->name << " because ";
 }

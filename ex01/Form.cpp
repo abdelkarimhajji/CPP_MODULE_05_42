@@ -6,11 +6,21 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 20:52:06 by ahajji            #+#    #+#             */
-/*   Updated: 2024/02/08 13:59:14 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/02/10 10:17:24 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
+
+Form::Form()
+{
+    
+}
+
+Form::~Form()
+{
+    
+}
 
 std::string Form::getName() const
 {
