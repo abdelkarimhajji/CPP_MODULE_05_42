@@ -6,15 +6,25 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 20:52:06 by ahajji            #+#    #+#             */
-/*   Updated: 2024/02/10 10:17:24 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/02/10 13:45:30 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
+#include "Bureaucrat.hpp"
 
-Form::Form()
+Form::Form(const std::string &name, const int gradeRequiredToSign, const int gradeRequiredToExecute) : 
+name(name), signedStatus(false), gradeRequiredToSign(gradeRequiredToSign), 
+gradeRequiredToExecute(gradeRequiredToExecute) 
 {
-    
+    if (gradeRequiredToSign < 1)
+        throw GradeTooHighException();
+    else
+        throw GradeTooLowException();
+    if (gradeRequiredToExecute < 1)
+        throw GradeTooHighException();
+    else
+        throw GradeTooLowException();
 }
 
 Form::~Form()

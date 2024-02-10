@@ -6,12 +6,17 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:17:08 by ahajji            #+#    #+#             */
-/*   Updated: 2024/02/09 21:55:58 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/02/10 15:17:19 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef BUREAUCRAT
+#define BUREAUCRAT
+
 #include <iostream>
 #include "Form.hpp"
+
+class Form;
 
 class Bureaucrat
 {
@@ -26,8 +31,8 @@ class Bureaucrat
         const std::string getName() const;
         const int getGrade() const;
         void incrementGrade();
-        void decrementGrade();
-        void    signForm(Form& form);
+        void    decrementGrade();
+        void signForm(Form& form);
 
         class GradeTooHighException : public std::exception {
             public:
@@ -38,7 +43,9 @@ class Bureaucrat
         {
             public:
                 const char* what() const throw();
-        };   
+        };
 };
 
 std::ostream& operator<<(std::ostream &os, const Bureaucrat &b);
+
+#endif

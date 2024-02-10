@@ -6,11 +6,18 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 20:52:03 by ahajji            #+#    #+#             */
-/*   Updated: 2024/02/10 10:19:23 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/02/10 13:47:34 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "Bureaucrat.hpp"
+
+#ifndef Form_H
+#define Form_H
+
+#include <iostream>
+#include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form 
 {
@@ -20,11 +27,11 @@ class Form
         const int  gradeRequiredToSign;
         const int  gradeRequiredToExecute;
     public:
-        Form();
+        Form(const std::string &name, const int gradeRequiredToSign, const int gradeRequiredToExecute);
         ~Form();
         
         std::string getName() const;
-        bool    getSignedStatus() const;
+        bool    getSignedStatus() const; 
         int getGradeRequiredToSign() const;
         int getGradeRequiredToExecute() const;
 
@@ -46,3 +53,5 @@ class Form
                 }
         };
 };
+
+#endif
