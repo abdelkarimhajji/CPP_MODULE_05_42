@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.cpp                                           :+:      :+:    :+:   */
+/*   AForm.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,10 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
+#include "AForm.hpp"
 
 
-Form::Form(const std::string &name, const int gradeRequiredToSign, const int gradeRequiredToExecute) : 
+AForm::AForm(const std::string &name, const int gradeRequiredToSign, const int gradeRequiredToExecute) : 
 name(name), signedStatus(false), gradeRequiredToSign(gradeRequiredToSign), 
 gradeRequiredToExecute(gradeRequiredToExecute) 
 {
@@ -23,32 +23,32 @@ gradeRequiredToExecute(gradeRequiredToExecute)
         throw GradeTooLowException();
 }
 
-Form::~Form()
+AForm::~AForm()
 {
     
 }
 
-std::string Form::getName() const
+std::string AForm::getName() const
 {
     return this->name;
 }
 
-bool    Form::getSignedStatus() const
+bool    AForm::getSignedStatus() const
 {
     return this->signedStatus;
 }
 
-int Form::getGradeRequiredToSign() const
+int AForm::getGradeRequiredToSign() const
 {
     return this->gradeRequiredToSign;
 }
 
-int Form::getGradeRequiredToExecute() const
+int AForm::getGradeRequiredToExecute() const
 {
     return this->gradeRequiredToExecute;
 }
 
-void    Form::beSigned(Bureaucrat& burcrat)
+void    AForm::beSigned(Bureaucrat& burcrat)
 {
     if(burcrat.getGrade() <= this->gradeRequiredToSign)
         this->signedStatus = true;
@@ -56,17 +56,17 @@ void    Form::beSigned(Bureaucrat& burcrat)
         throw GradeTooLowException();
 }
 
-const char* Form::GradeTooLowException::what() const throw(){
+const char* AForm::GradeTooLowException::what() const throw(){
     return "Grade so low";
 }
 
-const char* Form::GradeTooHighException::what() const throw()
+const char* AForm::GradeTooHighException::what() const throw()
 {
     return "Grade so High";
 }
 
-std::ostream& operator<<(std::ostream& os, const Form& form) {
-    os << "Form name: " << form.getName() << " Signed: " << (form.getSignedStatus() ? "Yes" : "No")
-       << " Grade to sign: " << form.getGradeRequiredToSign() << " Grade to execute: " << form.getGradeRequiredToExecute();
+std::ostream& operator<<(std::ostream& os, const AForm& Aform) {
+    os << "AForm name: " << Aform.getName() << " Signed: " << (Aform.getSignedStatus() ? "Yes" : "No")
+       << " Grade to sign: " << Aform.getGradeRequiredToSign() << " Grade to execute: " << Aform.getGradeRequiredToExecute();
     return os;
 }

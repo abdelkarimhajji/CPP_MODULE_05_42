@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   AForm.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -11,15 +11,15 @@
 /* ************************************************************************** */
 
 
-#ifndef Form_H
-#define Form_H
+#ifndef AForm_H
+#define AForm_H
 
 #include <iostream>
 #include "Bureaucrat.hpp"
 
 class Bureaucrat;
 
-class Form
+class AForm
 {
     private:
         const std::string name;
@@ -27,8 +27,8 @@ class Form
         const int  gradeRequiredToSign;
         const int  gradeRequiredToExecute;
     public:
-        Form(const std::string &name, const int gradeRequiredToSign, const int gradeRequiredToExecute);
-        ~Form();
+        AForm(const std::string &name, const int gradeRequiredToSign, const int gradeRequiredToExecute);
+        ~AForm();
         
         std::string getName() const;
         bool    getSignedStatus() const; 
@@ -50,6 +50,6 @@ class Form
         };
 };
 
-std::ostream& operator<<(std::ostream& os, const Form& form);
+std::ostream& operator<<(std::ostream& os, const AForm& Aform);
 
 #endif
