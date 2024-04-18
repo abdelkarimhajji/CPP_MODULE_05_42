@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:17:08 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/18 16:05:14 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/04/18 17:29:06 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 #define BUREAUCRAT
 
 #include <iostream>
-#include "Form.hpp"
-class Form;
+#include "AForm.hpp"
+class AForm;
 
 class Bureaucrat
 {
@@ -31,7 +31,7 @@ class Bureaucrat
         const int getGrade() const;
         void incrementGrade();
         void    decrementGrade();
-        void signForm(Form& form);
+        void signAForm(AForm& Aform);
 
         class GradeTooHighException : public std::exception {
             public:
