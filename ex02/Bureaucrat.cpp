@@ -6,13 +6,14 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:17:11 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/17 22:34:25 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/04/18 16:05:12 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat(const std::string name, int grade) : name(name)
+Bureaucrat::Bureaucrat(std::string name, int grade)
 {
     if(grade > 150) 
         throw GradeTooLowException();
@@ -20,10 +21,6 @@ Bureaucrat::Bureaucrat(const std::string name, int grade) : name(name)
         throw GradeTooHighException();
     else
         this->grade = grade;
-}
-Bureaucrat::Bureaucrat() : name("ahajji"), grade(1)
-{
-
 }
 
 Bureaucrat::~Bureaucrat()
@@ -60,7 +57,6 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat &b)
 }
 
 
-
 void Bureaucrat::decrementGrade()
 {
     if(grade >= 150)
@@ -68,7 +64,6 @@ void Bureaucrat::decrementGrade()
     else
         this->grade++;
 }
-
 const char* Bureaucrat::GradeTooLowException::what() const throw(){
     return "Grade so low";
 }
@@ -83,3 +78,10 @@ std::ostream& operator<<(std::ostream &os, const Bureaucrat &b)
     return os << b.getName() << ", bureaucrat grade " << b.getGrade() << std::endl;
 }
 
+void Bureaucrat::signForm(Form& form)
+{
+    if (form.getSignedStatus())
+        std::cout << this->name << " signed " << form.getName();
+    else
+        std::cout << this->name << " couldn’t sign " << form.getName() << " because ";
+}

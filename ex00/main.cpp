@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahajji <ahajji@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 13:30:53 by ahajji            #+#    #+#             */
-/*   Updated: 2024/01/27 00:37:48 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/04/17 21:48:34 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ int main(void)
 {
     try
     {
-        Bureaucrat b("ahajji", 1233);
+        Bureaucrat b("ahajji", 12);
+        // std::cout << "Bureaucrat details: \n" ;
+        std::cout << "Bureaucrat details: " << b << std::endl;
     }
     catch(const std::exception& e)
     {
