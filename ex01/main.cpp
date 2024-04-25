@@ -18,7 +18,7 @@ int main(void)
     try
     {
         Bureaucrat b("ahajji", 12);
-        Form f("Form", 5, -5);
+        // AForm f("Form", 5, -5);
     }
     catch(const std::exception& e)
     {

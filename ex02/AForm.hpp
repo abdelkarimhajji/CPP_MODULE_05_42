@@ -28,7 +28,7 @@ class AForm
         const int  gradeRequiredToExecute;
     public:
         AForm(const std::string &name, const int gradeRequiredToSign, const int gradeRequiredToExecute);
-        ~AForm();
+        virtual ~AForm();
         
         std::string getName() const;
         bool    getSignedStatus() const; 
@@ -36,7 +36,9 @@ class AForm
         int getGradeRequiredToExecute() const;
 
         void    beSigned(Bureaucrat& burcrat);
-        virtual void execute() = 0;
+
+        virtual void execute(Bureaucrat const & executor) const = 0;
+
         class GradeTooHighException : public std::exception
         {
             public:
@@ -50,6 +52,6 @@ class AForm
         };
 };
 
-std::ostream& operator<<(std::ostream& os, const AForm& Aform);
+std::ostream& operator<<(std::ostream& os, const AForm& form);
 
 #endif

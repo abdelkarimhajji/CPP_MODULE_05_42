@@ -12,18 +12,37 @@
 
 #include <iostream>
 #include "Bureaucrat.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 int main(void)
 {
-    try
-    {
-        Bureaucrat b("ahajji", 12);
-        Form f("Form", 5, -5);
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
+    // try
+    // {
+    //     Bureaucrat b("ahajji", 12);
+    //     // AForm f("Form", 5, -5);
+    // }
+    // catch(const std::exception& e)
+    // {
+    //     std::cerr << e.what() << '\n';
+    // }
+    // Create a bureaucrat with grade 137
+try
+{
 
+Bureaucrat bob("Bob", 120);
+
+// Create a shrubbery creation form with target "home"
+ShrubberyCreationForm form("home");
+
+// Bob signs the form
+form.beSigned(bob);
+
+// Bob executes the form
+form.execute(bob);
+}
+catch(const std::exception& e)
+{
+    std::cerr << e.what() << '\n';
+}
     return 0;
 }

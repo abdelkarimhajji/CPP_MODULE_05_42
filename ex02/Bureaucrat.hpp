@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:17:08 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/18 17:29:06 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/04/25 10:19:32 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,13 @@ class Bureaucrat
         void    decrementGrade();
         void signAForm(AForm& Aform);
 
+
+        void    executeForm(AForm const & form);
         class GradeTooHighException : public std::exception {
             public:
                 const char* what() const throw();
         };
-        
+
         class GradeTooLowException : public std::exception
         {
             public:
