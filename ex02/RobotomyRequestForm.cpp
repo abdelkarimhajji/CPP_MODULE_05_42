@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
+/*   RobotomyRequestAForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 15:24:59 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/24 15:29:08 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/04/25 15:54:21 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <cstdlib>
-#include "RobotomyRequestForm.hpp"
+#include "RobotomyRequestAForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm(const std::string &target)
+RobotomyRequestAForm::RobotomyRequestAForm(const std::string &target)
     : AForm(target, 72, 45), target(target) {}
 
-RobotomyRequestForm::~RobotomyRequestForm() {}
+RobotomyRequestAForm::~RobotomyRequestAForm() {}
 
-void RobotomyRequestForm::execute(Bureaucrat const & executor) const
+void RobotomyRequestAForm::execute(Bureaucrat const & executor) const
 {
     if (!getSignedStatus())
         throw AForm::GradeTooLowException();

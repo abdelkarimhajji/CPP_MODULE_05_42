@@ -12,14 +12,14 @@
 
 #include <iostream>
 #include "Bureaucrat.hpp"
-#include "ShrubberyCreationForm.hpp"
+#include "ShrubberyCreationAForm.hpp"
 
 int main(void)
 {
     // try
     // {
     //     Bureaucrat b("ahajji", 12);
-    //     // AForm f("Form", 5, -5);
+    //     // AForm f("AForm", 5, -5);
     // }
     // catch(const std::exception& e)
     // {
@@ -31,14 +31,14 @@ try
 
 Bureaucrat bob("Bob", 120);
 
-// Create a shrubbery creation form with target "home"
-ShrubberyCreationForm form("home");
+// Create a shrubbery creation AForm with target "home"
+ShrubberyCreationAForm AForm("home");
 
-// Bob signs the form
-form.beSigned(bob);
+// Bob signs the AForm
+AForm.beSigned(bob);
 
-// Bob executes the form
-form.execute(bob);
+// Bob executes the AForm
+AForm.execute(bob);
 }
 catch(const std::exception& e)
 {

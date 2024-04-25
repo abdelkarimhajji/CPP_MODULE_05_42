@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 15:46:40 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/25 10:10:52 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/04/25 15:54:21 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 #include "PresidentialPardonForm.hpp"
 
 PresidentialPardonForm::PresidentialPardonForm(const std::string &target)
-    : AForm(target, 25, 5), target(target) {}
+    : Form(target, 25, 5), target(target) {}
 
 PresidentialPardonForm::~PresidentialPardonForm() {}
 
 void PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
     if (!getSignedStatus())
-        throw AForm::GradeTooLowException();
+        throw Form::GradeTooLowException();
     if (executor.getGrade() > getGradeRequiredToExecute())
-        throw AForm::GradeTooLowException();
+        throw Form::GradeTooLowException();
 
     std::cout << target << " has been pardoned by Zaphod Beeblebrox.\n";
 }

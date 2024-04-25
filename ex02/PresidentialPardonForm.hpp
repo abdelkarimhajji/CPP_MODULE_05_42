@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
+/*   PresidentialPardonAForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 17:46:44 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/25 10:29:29 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/04/25 15:54:21 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRESIDENTIALPARDONFORM_HPP
-#define PRESIDENTIALPARDONFORM_HPP
+#ifndef PRESIDENTIALPARDONAForm_HPP
+#define PRESIDENTIALPARDONAForm_HPP
 
 #include <string>
 #include "AForm.hpp"
 #include "Bureaucrat.hpp"
 
-class PresidentialPardonForm : public AForm
+class PresidentialPardonAForm : public AForm
 {
 public:
-    PresidentialPardonForm(const std::string &target);
-    virtual ~PresidentialPardonForm();
+    PresidentialPardonAForm(const std::string &target);
+    virtual ~PresidentialPardonAForm();
 
     void execute(Bureaucrat const & executor) const ;
 

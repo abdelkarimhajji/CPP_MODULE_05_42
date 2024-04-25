@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 17:46:44 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/25 10:29:29 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/04/25 15:54:21 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 #define PRESIDENTIALPARDONFORM_HPP
 
 #include <string>
-#include "AForm.hpp"
+#include "Form.hpp"
 #include "Bureaucrat.hpp"
 
-class PresidentialPardonForm : public AForm
+class PresidentialPardonForm : public Form
 {
 public:
     PresidentialPardonForm(const std::string &target);

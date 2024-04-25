@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 17:46:28 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/25 10:29:38 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/04/25 15:54:21 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 #define ROBOTOMYREQUESTFORM_HPP
 
 #include <string>
-#include "AForm.hpp"
+#include "Form.hpp"
 #include "Bureaucrat.hpp"
 
-class RobotomyRequestForm : public AForm
+class RobotomyRequestForm : public Form
 {
 public:
     RobotomyRequestForm(const std::string &target);

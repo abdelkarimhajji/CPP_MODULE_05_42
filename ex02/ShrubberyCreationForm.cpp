@@ -1,12 +1,12 @@
-#include "ShrubberyCreationForm.hpp"
+#include "ShrubberyCreationAForm.hpp"
 #include <fstream>
 
-ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target)
+ShrubberyCreationAForm::ShrubberyCreationAForm(const std::string &target)
     : AForm(target, 145, 137) ,  target(target){}
 
-ShrubberyCreationForm::~ShrubberyCreationForm() {}
+ShrubberyCreationAForm::~ShrubberyCreationAForm() {}
 
-void    ShrubberyCreationForm::execute(Bureaucrat const & executor) const
+void    ShrubberyCreationAForm::execute(Bureaucrat const & executor) const
 {
     if (!getSignedStatus())
         throw AForm::GradeTooLowException();

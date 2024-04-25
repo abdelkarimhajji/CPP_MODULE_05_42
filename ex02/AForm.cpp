@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AForm.cpp                                           :+:      :+:    :+:   */
+/*   AAForm.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 20:52:06 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/18 16:07:10 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/04/25 15:54:21 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,8 @@ const char* AForm::GradeTooHighException::what() const throw()
     return "Grade so High";
 }
 
-std::ostream& operator<<(std::ostream& os, const AForm& Aform) {
-    os << "AForm name: " << Aform.getName() << " Signed: " << (Aform.getSignedStatus() ? "Yes" : "No")
-       << " Grade to sign: " << Aform.getGradeRequiredToSign() << " Grade to execute: " << Aform.getGradeRequiredToExecute();
+std::ostream& operator<<(std::ostream& os, const AForm& AForm) {
+    os << "AForm name: " << AForm.getName() << " Signed: " << (AForm.getSignedStatus() ? "Yes" : "No")
+       << " Grade to sign: " << AForm.getGradeRequiredToSign() << " Grade to execute: " << AForm.getGradeRequiredToExecute();
     return os;
 }

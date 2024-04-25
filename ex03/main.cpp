@@ -19,7 +19,7 @@ int main(void)
     // try
     // {
     //     Bureaucrat b("ahajji", 12);
-    //     // AForm f("Form", 5, -5);
+    //     // Form f("Form", 5, -5);
     // }
     // catch(const std::exception& e)
     // {
