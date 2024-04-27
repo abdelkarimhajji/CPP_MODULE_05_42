@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 17:21:30 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/27 10:14:20 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/04/27 10:37:22 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include <string>
 #include <iostream>
-#include "AForm.hpp"
+#include "Form.hpp"
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
@@ -28,7 +28,7 @@ class Intern
 {
     public:
 
-    AForm	*makeForm(const std::string form_to_create, const std::string target_for_form);
+    Form	*makeForm(const std::string form_to_create, const std::string target_for_form);
 
 };
 

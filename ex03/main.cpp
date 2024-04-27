@@ -48,28 +48,28 @@ int main(void)
 Intern intern;
 
     // Test creating a PresidentialPardonForm
-    AForm* form1 = intern.makeForm("PresidentialPardonForm", "Target1");
+    Form* form1 = intern.makeForm("PresidentialPardonForm", "Target1");
     if (form1 != NULL) {
         // Use form1
         delete form1;
     }
 
     // Test creating a RobotomyRequestForm
-    AForm* form2 = intern.makeForm("RobotomyRequestForm", "Target2");
+    Form* form2 = intern.makeForm("RobotomyRequestForm", "Target2");
     if (form2 != NULL) {
         // Use form2
         delete form2;
     }
 
     // Test creating a ShrubberyCreationForm
-    AForm* form3 = intern.makeForm("ShrubberyCreationForm", "Target3");
+    Form* form3 = intern.makeForm("ShrubberyCreationForm", "Target3");
     if (form3 != NULL) {
         // Use form3
         delete form3;
     }
 
     // Test creating a form that doesn't exist
-    AForm* form4 = intern.makeForm("NonexistentForm", "Target4");
+    Form* form4 = intern.makeForm("NonexistentForm", "Target4");
     if (form4 != NULL) {
         // This should not happen
         delete form4;

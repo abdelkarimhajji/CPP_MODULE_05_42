@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:17:11 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/25 16:06:02 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/04/27 10:39:10 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,19 +79,19 @@ std::ostream& operator<<(std::ostream &os, const Bureaucrat &b)
     return os << b.getName() << ", bureaucrat grade " << b.getGrade() << std::endl;
 }
 
-void Bureaucrat::signAForm(AForm& AForm)
+void Bureaucrat::signForm(Form& Form)
 {
-    if (AForm.getSignedStatus())
-        std::cout << this->name << " signed " << AForm.getName();
+    if (Form.getSignedStatus())
+        std::cout << this->name << " signed " << Form.getName();
     else
-        std::cout << this->name << " couldn’t sign " << AForm.getName() << " because ";
+        std::cout << this->name << " couldn’t sign " << Form.getName() << " because ";
 }
 
-void    Bureaucrat::executeAForm(AForm const & AForm)
+void    Bureaucrat::executeForm(Form const & Form)
 {
     try {
-        AForm.execute(*this);
-        std::cout << getName() << " executed " << AForm.getName() << "\n";
+        Form.execute(*this);
+        std::cout << getName() << " executed " << Form.getName() << "\n";
     } catch (std::exception & e) {
         std::cout << "Error: " << e.what() << "\n";
     }

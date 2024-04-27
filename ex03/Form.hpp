@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AAForm.hpp                                          :+:      :+:    :+:   */
+/*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 20:52:03 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/25 15:54:21 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/04/27 10:36:52 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 class Bureaucrat;
 
-class AForm
+class Form
 {
     private:
         const std::string name;
@@ -27,8 +27,8 @@ class AForm
         const int  gradeRequiredToSign;
         const int  gradeRequiredToExecute;
     public:
-        AForm(const std::string &name, const int gradeRequiredToSign, const int gradeRequiredToExecute);
-        virtual ~AForm();
+        Form(const std::string &name, const int gradeRequiredToSign, const int gradeRequiredToExecute);
+        virtual ~Form();
         
         std::string getName() const;
         bool    getSignedStatus() const; 
@@ -52,6 +52,6 @@ class AForm
         };
 };
 
-std::ostream& operator<<(std::ostream& os, const AForm& AForm);
+std::ostream& operator<<(std::ostream& os, const Form& AForm);
 
 #endif
