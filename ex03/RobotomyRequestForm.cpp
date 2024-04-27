@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 15:24:59 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/25 15:54:21 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/04/26 12:03:22 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 #include "RobotomyRequestForm.hpp"
 
 RobotomyRequestForm::RobotomyRequestForm(const std::string &target)
-    : Form(target, 72, 45), target(target) {}
+    : AForm(target, 72, 45), target(target) {}
 
 RobotomyRequestForm::~RobotomyRequestForm() {}
 
 void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
     if (!getSignedStatus())
-        throw Form::GradeTooLowException();
+        throw AForm::GradeTooLowException();
     if (executor.getGrade() > getGradeRequiredToExecute())
-        throw Form::GradeTooLowException();
+        throw AForm::GradeTooLowException();
 
     std::cout << "Drilling noises...\n";
     if (rand() % 2) {

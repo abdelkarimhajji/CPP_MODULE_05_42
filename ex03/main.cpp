@@ -13,6 +13,7 @@
 #include <iostream>
 #include "Bureaucrat.hpp"
 #include "ShrubberyCreationForm.hpp"
+#include "Intern.hpp"
 
 int main(void)
 {
@@ -26,23 +27,53 @@ int main(void)
     //     std::cerr << e.what() << '\n';
     // }
     // Create a bureaucrat with grade 137
-try
-{
+// try
+// {
 
-Bureaucrat bob("Bob", 120);
+// Bureaucrat bob("Bob", 120);
 
-// Create a shrubbery creation form with target "home"
-ShrubberyCreationForm form("home");
+// // Create a shrubbery creation Form with target "home"
+// ShrubberyCreationForm Form("home");
 
-// Bob signs the form
-form.beSigned(bob);
+// // Bob signs the Form
+// Form.beSigned(bob);
 
-// Bob executes the form
-form.execute(bob);
-}
-catch(const std::exception& e)
-{
-    std::cerr << e.what() << '\n';
-}
+// // Bob executes the Form
+// Form.execute(bob);
+// }
+// catch(const std::exception& e)
+// {
+//     std::cerr << e.what() << '\n';
+// }
+Intern intern;
+
+    // Test creating a PresidentialPardonForm
+    AForm* form1 = intern.makeForm("PresidentialPardonForm", "Target1");
+    if (form1 != NULL) {
+        // Use form1
+        delete form1;
+    }
+
+    // Test creating a RobotomyRequestForm
+    AForm* form2 = intern.makeForm("RobotomyRequestForm", "Target2");
+    if (form2 != NULL) {
+        // Use form2
+        delete form2;
+    }
+
+    // Test creating a ShrubberyCreationForm
+    AForm* form3 = intern.makeForm("ShrubberyCreationForm", "Target3");
+    if (form3 != NULL) {
+        // Use form3
+        delete form3;
+    }
+
+    // Test creating a form that doesn't exist
+    AForm* form4 = intern.makeForm("NonexistentForm", "Target4");
+    if (form4 != NULL) {
+        // This should not happen
+        delete form4;
+    }
+
     return 0;
 }

@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PresidentialPardonAForm.cpp                         :+:      :+:    :+:   */
+/*   PresidentialPardonForm.cpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 15:46:40 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/25 15:54:21 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/04/26 12:02:10 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "PresidentialPardonAForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
-PresidentialPardonAForm::PresidentialPardonAForm(const std::string &target)
+PresidentialPardonForm::PresidentialPardonForm(const std::string &target)
     : AForm(target, 25, 5), target(target) {}
 
-PresidentialPardonAForm::~PresidentialPardonAForm() {}
+PresidentialPardonForm::~PresidentialPardonForm() {}
 
-void PresidentialPardonAForm::execute(Bureaucrat const & executor) const
+void PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
     if (!getSignedStatus())
         throw AForm::GradeTooLowException();

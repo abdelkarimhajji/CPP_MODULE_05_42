@@ -6,16 +6,16 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 17:46:16 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/25 15:54:21 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/04/26 12:03:43 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBBERYCREATIONFORM_H
-#define SHRUBBERYCREATIONFORM_H
+#ifndef SHRUBBERYCREATIONForm_H
+#define SHRUBBERYCREATIONForm_H
 
-#include "Form.hpp"
+#include "AForm.hpp"
 
-class ShrubberyCreationForm :  public Form
+class ShrubberyCreationForm :  public AForm
 {
     private:
         const std::string target;
