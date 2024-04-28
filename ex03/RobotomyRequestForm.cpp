@@ -6,13 +6,28 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 15:24:59 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/27 10:39:36 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/04/28 16:12:27 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <cstdlib>
 #include "RobotomyRequestForm.hpp"
+
+RobotomyRequestForm::RobotomyRequestForm() : Form() {
+
+}
+
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& robo) : Form(robo), target(robo.target) {
+
+}
+
+RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& robo) {
+    if (this != &robo) {
+        target = robo.target;
+    }
+    return *this;
+}
 
 RobotomyRequestForm::RobotomyRequestForm(const std::string &target)
     : Form(target, 72, 45), target(target) {}

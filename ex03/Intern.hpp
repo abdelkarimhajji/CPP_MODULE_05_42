@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 17:21:30 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/27 10:37:22 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/04/27 11:14:13 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,10 @@ class ShrubberyCreationForm;
 class Intern
 {
     public:
-
+    Intern();
+    Intern(const Intern& other);
+    Intern& operator=(const Intern& other);
+    ~Intern();
     Form	*makeForm(const std::string form_to_create, const std::string target_for_form);
 
 };

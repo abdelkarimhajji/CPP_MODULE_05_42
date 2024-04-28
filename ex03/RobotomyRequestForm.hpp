@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 17:46:28 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/27 10:37:56 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/04/28 16:10:26 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,17 @@
 
 class RobotomyRequestForm : public Form
 {
+private:
+    std::string target;
 public:
+    RobotomyRequestForm();
+    RobotomyRequestForm(const RobotomyRequestForm& robo);
+    RobotomyRequestForm& operator=(const RobotomyRequestForm& robo);
     RobotomyRequestForm(const std::string &target);
     virtual ~RobotomyRequestForm();
 
     void execute(Bureaucrat const & executor) const ;
 
-private:
-    std::string target;
 };
 
 #endif 

@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 17:46:16 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/27 10:38:01 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/04/28 16:15:06 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,11 @@
 class ShrubberyCreationForm :  public Form
 {
     private:
-        const std::string target;
+        std::string target;
     public:
+        ShrubberyCreationForm();
+        ShrubberyCreationForm(const ShrubberyCreationForm& shrubbery);
+        ShrubberyCreationForm& operator=(const ShrubberyCreationForm& shrubbery);
         ShrubberyCreationForm(const std::string &target);
         virtual ~ShrubberyCreationForm();
         void execute(Bureaucrat const & executor) const;
