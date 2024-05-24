@@ -6,10 +6,12 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:17:08 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/17 22:46:30 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/04/29 14:22:32 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
+// Add header guard
 #include <iostream>
 
 class Bureaucrat

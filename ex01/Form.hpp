@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 20:52:03 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/25 15:54:21 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/04/29 14:25:59 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ private:
 
 public:
     Form(const std::string &name, int gradeRequiredToSign, int gradeRequiredToExecute);
-    virtual ~Form();
+    ~Form();
 
     std::string getName() const;
     bool getSignedStatus() const;
@@ -36,8 +36,6 @@ public:
     int getGradeRequiredToExecute() const;
 
     void beSigned(Bureaucrat &bureaucrat);
-    virtual void execute(Bureaucrat const &executor) const = 0;
-
     class GradeTooHighException : public std::exception {
     public:
         const char* what() const throw();
