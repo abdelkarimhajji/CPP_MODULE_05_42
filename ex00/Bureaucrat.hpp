@@ -6,10 +6,9 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:17:08 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/29 14:22:32 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/05/30 16:39:26 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 // Add header guard
 #include <iostream>
@@ -29,12 +28,10 @@ class Bureaucrat
         const int getGrade() const;
         void incrementGrade();
         void decrementGrade();
-
         class GradeTooHighException : public std::exception {
             public:
                 const char* what() const throw();
         };
-        
         class GradeTooLowException : public std::exception
         {
             public:

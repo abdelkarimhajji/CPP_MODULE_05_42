@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 20:52:06 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/18 16:07:10 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/05/30 17:38:18 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,10 @@ int Form::getGradeRequiredToExecute() const
 void    Form::beSigned(Bureaucrat& burcrat)
 {
     if(burcrat.getGrade() <= this->gradeRequiredToSign)
+    {
+        std::cout << "beSigned\n";        
         this->signedStatus = true;
+    }
     else
         throw GradeTooLowException();
 }

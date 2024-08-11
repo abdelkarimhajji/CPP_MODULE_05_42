@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:17:11 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/17 22:34:25 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/05/30 16:52:48 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ Bureaucrat::Bureaucrat() : name("ahajji"), grade(1)
 
 Bureaucrat::~Bureaucrat()
 {
+    std::cout << "i am the deconstructer\n";
 }
 
 const std::string Bureaucrat::getName() const
