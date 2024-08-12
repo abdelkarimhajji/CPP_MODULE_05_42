@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 15:46:40 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/26 12:02:10 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/08/12 14:33:14 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
     if (!getSignedStatus())
         throw AForm::GradeTooLowException();
-    if (executor.getGrade() > getGradeRequiredToExecute())
+    else if (executor.getGrade() > getGradeRequiredToExecute())
         throw AForm::GradeTooLowException();
 
     std::cout << target << " has been pardoned by Zaphod Beeblebrox.\n";

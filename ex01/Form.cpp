@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 20:52:06 by ahajji            #+#    #+#             */
-/*   Updated: 2024/05/30 17:38:18 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/08/12 14:24:43 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,11 +52,14 @@ void    Form::beSigned(Bureaucrat& burcrat)
 {
     if(burcrat.getGrade() <= this->gradeRequiredToSign)
     {
-        std::cout << "beSigned\n";        
+        std::cout << burcrat.getName() << " beSigned " << this->name << "\n";        
         this->signedStatus = true;
     }
     else
+    {
+        std::cout << burcrat.getName() << " couldn’t sign " << this->name << "because level of burcrat is slow\n";           
         throw GradeTooLowException();
+    }
 }
 
 const char* Form::GradeTooLowException::what() const throw(){

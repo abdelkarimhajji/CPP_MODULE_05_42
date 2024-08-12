@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:17:11 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/25 16:06:02 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/08/12 14:36:02 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,18 +81,16 @@ std::ostream& operator<<(std::ostream &os, const Bureaucrat &b)
 
 void Bureaucrat::signAForm(AForm& AForm)
 {
-    if (AForm.getSignedStatus())
-        std::cout << this->name << " signed " << AForm.getName();
-    else
-        std::cout << this->name << " couldn’t sign " << AForm.getName() << " because ";
+    AForm.beSigned(*this);
 }
 
 void    Bureaucrat::executeAForm(AForm const & AForm)
 {
-    try {
+    
+    // try {
         AForm.execute(*this);
-        std::cout << getName() << " executed " << AForm.getName() << "\n";
-    } catch (std::exception & e) {
-        std::cout << "Error: " << e.what() << "\n";
-    }
+        std::cout << getNa  
+    // } catch (std::exception & e) {
+    //     std::cout << "Error: " << e.what() << "\n";
+    // }
 }

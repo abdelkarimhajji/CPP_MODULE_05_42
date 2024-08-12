@@ -33,6 +33,7 @@ Bureaucrat bob("Bob", 120);
 
 // Create a shrubbery creation AForm with target "home"
 ShrubberyCreationAForm AForm("home");
+ShrubberyCreationAForm RobotomyRequestForm("person");
 
 // Bob signs the AForm
 AForm.beSigned(bob);

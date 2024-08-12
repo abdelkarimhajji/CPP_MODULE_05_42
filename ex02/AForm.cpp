@@ -51,9 +51,15 @@ int AForm::getGradeRequiredToExecute() const
 void    AForm::beSigned(Bureaucrat& burcrat)
 {
     if(burcrat.getGrade() <= this->gradeRequiredToSign)
+    {
+        std::cout << burcrat.getName() << " beSigned " << this->name << "\n";        
         this->signedStatus = true;
+    }
     else
+    {
+        std::cout << burcrat.getName() << " couldn’t sign " << this->name << "because level of burcrat is slow\n";           
         throw GradeTooLowException();
+    }
 }
 
 const char* AForm::GradeTooLowException::what() const throw(){

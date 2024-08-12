@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:17:11 by ahajji            #+#    #+#             */
-/*   Updated: 2024/08/12 11:07:48 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/08/12 14:27:10 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ void Bureaucrat::decrementGrade()
     else
         this->grade++;
 }
+
 const char* Bureaucrat::GradeTooLowException::what() const throw(){
     return "Grade so low";
 }
@@ -80,8 +81,5 @@ std::ostream& operator<<(std::ostream &os, const Bureaucrat &b)
 
 void Bureaucrat::signForm(Form& form)
 {
-    if (form.getSignedStatus())
-        std::cout << this->name << " signed " << form.getName();
-    else
-        std::cout << this->name << " couldn’t sign " << form.getName() << " because the grad slow " << this->grade;
+    form.beSigned(*this);
 }

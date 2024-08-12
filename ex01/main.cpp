@@ -17,10 +17,11 @@ int main(void)
 {
     try
     {
-        Bureaucrat b("ahajji", 6);
+        Bureaucrat b("ahajji", 2);
         Form f("Form", 5, 20);
         // f.beSigned(b);
         b.signForm(f);
+
     }
     catch(const std::exception& e)
     {
