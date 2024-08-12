@@ -6,10 +6,9 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:17:11 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/18 17:25:34 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/08/12 10:43:46 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "Bureaucrat.hpp"
 
@@ -25,6 +24,7 @@ Bureaucrat::Bureaucrat(std::string name, int grade)
 
 Bureaucrat::~Bureaucrat()
 {
+    
 }
 
 const std::string Bureaucrat::getName() const
@@ -48,7 +48,7 @@ void    Bureaucrat::incrementGrade()
     if(grade <= 1)
         throw GradeTooHighException();
     else
-    this->grade--;
+        this->grade--;
 }
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat &b)
 {
