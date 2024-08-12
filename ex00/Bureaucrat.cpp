@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:17:11 by ahajji            #+#    #+#             */
-/*   Updated: 2024/05/30 16:52:48 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/08/11 18:09:38 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,6 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat &b)
 }
 
 
-
 void Bureaucrat::decrementGrade()
 {
     if(grade >= 150)
@@ -83,4 +82,3 @@ std::ostream& operator<<(std::ostream &os, const Bureaucrat &b)
 {
     return os << b.getName() << ", bureaucrat grade " << b.getGrade() << std::endl;
 }
-
