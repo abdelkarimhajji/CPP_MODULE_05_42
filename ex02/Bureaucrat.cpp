@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:17:11 by ahajji            #+#    #+#             */
-/*   Updated: 2024/08/12 14:36:02 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/08/12 15:34:21 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ void    Bureaucrat::executeAForm(AForm const & AForm)
     
     // try {
         AForm.execute(*this);
-        std::cout << getNa  
+        // std::cout << getNa  
     // } catch (std::exception & e) {
     //     std::cout << "Error: " << e.what() << "\n";
     // }

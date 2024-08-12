@@ -12,7 +12,8 @@
 
 #include <iostream>
 #include "Bureaucrat.hpp"
-#include "ShrubberyCreationAForm.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
 
 int main(void)
 {
@@ -29,17 +30,18 @@ int main(void)
 try
 {
 
-Bureaucrat bob("Bob", 120);
+Bureaucrat bob("Bob", 2);
 
 // Create a shrubbery creation AForm with target "home"
-ShrubberyCreationAForm AForm("home");
-ShrubberyCreationAForm RobotomyRequestForm("person");
+RobotomyRequestForm AForm("home");
+// RobotomyRequestForm RobotomyRequestForm("person");
 
-// Bob signs the AForm
+// // Bob signs the AForm
 AForm.beSigned(bob);
-
-// Bob executes the AForm
 AForm.execute(bob);
+
+// // Bob executes the AForm
+// AForm.execute(bob);
 }
 catch(const std::exception& e)
 {

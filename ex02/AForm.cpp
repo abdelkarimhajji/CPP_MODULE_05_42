@@ -50,9 +50,10 @@ int AForm::getGradeRequiredToExecute() const
 
 void    AForm::beSigned(Bureaucrat& burcrat)
 {
-    if(burcrat.getGrade() <= this->gradeRequiredToSign)
+    std::cout << "burcrat grad " << burcrat.getGrade() << " form require grade " << this->gradeRequiredToSign << "\n";
+    if(burcrat.getGrade() < this->gradeRequiredToSign)
     {
-        std::cout << burcrat.getName() << " beSigned " << this->name << "\n";        
+        std::cout << burcrat.getName() << " beSigned ! " << this->name << "\n";        
         this->signedStatus = true;
     }
     else
