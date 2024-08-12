@@ -19,8 +19,8 @@ int main(void)
     {
         Bureaucrat b("ahajji", 6);
         Form f("Form", 5, 20);
-        f.beSigned(b);
-        
+        // f.beSigned(b);
+        b.signForm(f);
     }
     catch(const std::exception& e)
     {

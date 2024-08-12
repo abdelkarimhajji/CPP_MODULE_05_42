@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:17:11 by ahajji            #+#    #+#             */
-/*   Updated: 2024/08/12 10:43:46 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/08/12 11:07:48 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,5 +83,5 @@ void Bureaucrat::signForm(Form& form)
     if (form.getSignedStatus())
         std::cout << this->name << " signed " << form.getName();
     else
-        std::cout << this->name << " couldn’t sign " << form.getName() << " because ";
+        std::cout << this->name << " couldn’t sign " << form.getName() << " because the grad slow " << this->grade;
 }
