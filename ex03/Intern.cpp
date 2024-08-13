@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 10:44:07 by ahajji            #+#    #+#             */
-/*   Updated: 2024/08/13 13:14:47 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/08/13 14:55:46 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,6 @@ Form	*Intern::makeForm(const std::string form_to_create, const std::string targe
     }
 
     delete all_forms[0], delete all_forms[1], delete all_forms[2];
-    std::cout << "Intern can not create a form called " << form_to_create << "\033[0m" << std::endl;
+    std::cout << "Intern can not create a form called " << form_to_create  << std::endl;
     return (NULL);
 }
