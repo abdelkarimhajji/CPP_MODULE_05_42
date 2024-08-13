@@ -22,25 +22,23 @@ Intern intern;
 
     Form* form1 = intern.makeForm("PresidentialPardonForm", "Target1");
     if (form1 != NULL) {
-        // Use form1
         delete form1;
     }
 
     Form* form2 = intern.makeForm("RobotomyRequestForm", "Target2");
     if (form2 != NULL) {
-        // Use form2
+        
         delete form2;
     }
 
     Form* form3 = intern.makeForm("ShrubberyCreationForm", "Target3");
     if (form3 != NULL) {
-        // Use form3
+        
         delete form3;
     }
 
     Form* form4 = intern.makeForm("nonexistentform", "Target4");
     if (form4 != NULL) {
-        // This should not happen
         delete form4;
     }
 
