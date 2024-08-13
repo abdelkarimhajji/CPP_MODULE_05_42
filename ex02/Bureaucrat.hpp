@@ -6,14 +6,13 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:17:08 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/25 16:06:02 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/08/13 12:49:22 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BUREAUCRAT
 #define BUREAUCRAT
 
-#include <iostream>
 #include "AForm.hpp"
 class AForm;
 
