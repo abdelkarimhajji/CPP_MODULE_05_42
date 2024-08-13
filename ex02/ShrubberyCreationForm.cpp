@@ -13,7 +13,7 @@ void    ShrubberyCreationForm::execute(Bureaucrat const & executor) const
     if (executor.getGrade() > getGradeRequiredToExecute())
         throw AForm::GradeTooLowException();
 
-    std::ofstream ofs(getName() + "_shrubbery");
+    std::ofstream ofs(this->target + "_shrubbery");
     ofs << "                                                  .\n";
     ofs << "                                              .         ;  \n";
     ofs << "                 .              .              ;%     ;;   \n";

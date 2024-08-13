@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 15:24:59 by ahajji            #+#    #+#             */
-/*   Updated: 2024/08/12 15:48:14 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/08/13 11:46:18 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const
     if (executor.getGrade() > getGradeRequiredToExecute())
         throw AForm::GradeTooLowException();
 
-    std::cout << "Drilling noises...\n";
+    std::cout << " drilling noises...\n";
     if (rand() % 2) {
         std::cout << target << " has been robotomized successfully.\n";
     } else {
