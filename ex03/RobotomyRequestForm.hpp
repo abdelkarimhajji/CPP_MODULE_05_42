@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 17:46:28 by ahajji            #+#    #+#             */
-/*   Updated: 2024/08/13 15:06:52 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/08/13 15:33:14 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #include <string>
 #include "Form.hpp"
 #include "Bureaucrat.hpp"
+
+// class Form;
 
 class RobotomyRequestForm : public Form
 {

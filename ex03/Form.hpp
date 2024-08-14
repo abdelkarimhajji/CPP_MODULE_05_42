@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 20:52:03 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/28 16:00:16 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/08/13 15:55:26 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,10 @@ class Form
         const int  gradeRequiredToExecute;
     public:
         Form(const std::string &name, const int gradeRequiredToSign, const int gradeRequiredToExecute);
-        Form(const Form& other); 
-        virtual ~Form();
+        Form(const Form& other);
+        Form& operator=(const Form& other);
         Form();
+        virtual ~Form();
         std::string getName() const;
         bool    getSignedStatus() const; 
         int getGradeRequiredToSign() const;
