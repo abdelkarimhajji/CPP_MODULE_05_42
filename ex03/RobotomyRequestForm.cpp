@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 15:24:59 by ahajji            #+#    #+#             */
-/*   Updated: 2024/08/14 20:17:58 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/08/15 06:54:13 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,8 @@ RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& robo) : Form
 }
 
 RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& robo) {
-    if (this != &robo) {
+    if (this != &robo)
         target = robo.target;
-        return *this;
-    }
     return *this;
 }
 
@@ -42,10 +40,10 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const
     if (executor.getGrade() > getGradeRequiredToExecute())
         throw Form::GradeTooLowException();
 
-    std::cout << "Drilling noises...\n";
+    std::cout << "drilling noises ...\n";
     if (rand() % 2) {
         std::cout << target << " has been robotomized successfully.\n";
     } else {
-        std::cout << "The robotomy on " << target << " failed.\n";
+        std::cout << "the robotomy on " << target << " failed.\n";
     }
 }

@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 20:52:06 by ahajji            #+#    #+#             */
-/*   Updated: 2024/08/14 20:12:33 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/08/15 06:52:47 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ Form &Form::operator=(const Form& other)
 {
     std::cout << "Form operator called" << std::endl;
     if (this != &other)
-        return *this;
+        this->signedStatus = other.signedStatus;
     return *this;
 }
 
