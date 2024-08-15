@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 10:44:07 by ahajji            #+#    #+#             */
-/*   Updated: 2024/08/15 06:28:59 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/08/15 13:54:24 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 Intern::Intern() {
 }
-Intern::Intern(const Intern& other) {
+Intern::Intern(const Intern& /*other*/) {
+
 }
 Intern::~Intern() {
 }
