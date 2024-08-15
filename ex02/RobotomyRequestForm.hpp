@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 17:46:28 by ahajji            #+#    #+#             */
-/*   Updated: 2024/08/13 15:08:26 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/08/15 07:36:02 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@
 class RobotomyRequestForm : public AForm
 {
 public:
+     RobotomyRequestForm();
+    RobotomyRequestForm(const RobotomyRequestForm& robo);
+    RobotomyRequestForm& operator=(const RobotomyRequestForm& robo);
     RobotomyRequestForm(const std::string &target);
     ~RobotomyRequestForm();
 
