@@ -28,7 +28,10 @@ class AForm
         const int  gradeRequiredToSign;
         const int  gradeRequiredToExecute;
     public:
+        AForm();
         AForm(const std::string &name, const int gradeRequiredToSign, const int gradeRequiredToExecute);
+        AForm(const AForm& other);
+        AForm& operator=(const AForm& other);
         virtual ~AForm();
         
         std::string getName() const;

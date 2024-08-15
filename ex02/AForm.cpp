@@ -12,6 +12,9 @@
 
 #include "AForm.hpp"
 
+AForm::AForm() : name("name"), signedStatus(false), gradeRequiredToSign(150), gradeRequiredToExecute(150)
+{
+}
 
 AForm::AForm(const std::string &name, const int gradeRequiredToSign, const int gradeRequiredToExecute) : 
 name(name), signedStatus(false), gradeRequiredToSign(gradeRequiredToSign), 
@@ -27,6 +30,21 @@ AForm::~AForm()
 {
     
 }
+
+AForm &AForm::operator=(const AForm& other)
+{
+    std::cout << "Form operator called" << std::endl;
+    if (this != &other)
+        this->signedStatus = other.signedStatus;
+    return *this;
+}
+
+AForm::AForm(const AForm& other) 
+    : name(other.name), 
+      signedStatus(other.signedStatus), 
+      gradeRequiredToSign(other.gradeRequiredToSign), 
+      gradeRequiredToExecute(other.gradeRequiredToExecute) 
+{}
 
 std::string AForm::getName() const
 {
