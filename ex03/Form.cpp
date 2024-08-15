@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 20:52:06 by ahajji            #+#    #+#             */
-/*   Updated: 2024/08/15 06:52:47 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/08/15 07:10:08 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Form::~Form()
 {
 }
 
-Form::Form() : name("name"), gradeRequiredToSign(150), gradeRequiredToExecute(150)
+Form::Form() : name("name"), signedStatus(false), gradeRequiredToSign(150), gradeRequiredToExecute(150)
 {
 }
 
