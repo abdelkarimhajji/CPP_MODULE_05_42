@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:17:11 by ahajji            #+#    #+#             */
-/*   Updated: 2024/08/11 18:09:38 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/08/14 19:26:34 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ Bureaucrat::Bureaucrat(const std::string name, int grade) : name(name)
     else
         this->grade = grade;
 }
+
 Bureaucrat::Bureaucrat() : name("ahajji"), grade(1)
 {
 
@@ -54,12 +55,12 @@ void    Bureaucrat::incrementGrade()
     else
     this->grade--;
 }
+
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat &b)
 {
     this->grade = b.getGrade();
     return *this;
 }
-
 
 void Bureaucrat::decrementGrade()
 {

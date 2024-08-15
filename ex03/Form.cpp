@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 20:52:06 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/28 16:00:10 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/08/14 20:12:33 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Form::~Form()
 {
 }
 
-Form::Form() : name(""), gradeRequiredToSign(0), gradeRequiredToExecute(0)
+Form::Form() : name("name"), gradeRequiredToSign(150), gradeRequiredToExecute(150)
 {
 }
 
@@ -38,6 +38,13 @@ gradeRequiredToExecute(gradeRequiredToExecute)
         throw GradeTooLowException();
 }
 
+Form &Form::operator=(const Form& other)
+{
+    std::cout << "Form operator called" << std::endl;
+    if (this != &other)
+        return *this;
+    return *this;
+}
 
 std::string Form::getName() const
 {

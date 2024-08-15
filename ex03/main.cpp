@@ -25,22 +25,22 @@ Intern intern;
         delete form1;
     }
 
-    Form* form2 = intern.makeForm("RobotomyRequestForm", "Target2");
-    if (form2 != NULL) {
+    // Form* form2 = intern.makeForm("RobotomyRequestForm", "Target2");
+    // if (form2 != NULL) {
         
-        delete form2;
-    }
+    //     delete form2;
+    // }
 
-    Form* form3 = intern.makeForm("ShrubberyCreationForm", "Target3");
-    if (form3 != NULL) {
+    // Form* form3 = intern.makeForm("ShrubberyCreationForm", "Target3");
+    // if (form3 != NULL) {
         
-        delete form3;
-    }
+    //     delete form3;
+    // }
 
-    Form* form4 = intern.makeForm("nonexistentform", "Target4");
-    if (form4 != NULL) {
-        delete form4;
-    }
+    // Form* form4 = intern.makeForm("nonexistentform", "Target4");
+    // if (form4 != NULL) {
+    //     delete form4;
+    // }
 
     return 0;
 }
