@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 16:13:51 by ahajji            #+#    #+#             */
-/*   Updated: 2024/04/28 16:14:43 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/08/15 15:50:50 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm() {}
 void    ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
     if (!getSignedStatus())
-        throw Form::GradeTooLowException();
+        throw Form::NotSignedException();
     if (executor.getGrade() > getGradeRequiredToExecute())
         throw Form::GradeTooLowException();
 

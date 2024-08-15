@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 20:52:03 by ahajji            #+#    #+#             */
-/*   Updated: 2024/08/13 15:55:26 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/08/15 15:55:54 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,18 @@ class Form
         };
 
         class  GradeTooLowException : public std::exception
+        {
+            public:
+                const char* what() const throw();
+        };
+        
+        class  NotSignedException : public std::exception
+        {
+            public:
+                const char* what() const throw();
+        };
+
+        class  InvalidFormException : public std::exception
         {
             public:
                 const char* what() const throw();

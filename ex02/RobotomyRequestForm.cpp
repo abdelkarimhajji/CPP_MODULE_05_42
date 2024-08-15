@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 15:24:59 by ahajji            #+#    #+#             */
-/*   Updated: 2024/08/15 13:33:44 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/08/15 15:45:03 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ RobotomyRequestForm::~RobotomyRequestForm() {}
 void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
     if (!getSignedStatus())
-        throw AForm::GradeTooLowException();
+        throw AForm::NotSignedException();
     if (executor.getGrade() > getGradeRequiredToExecute())
         throw AForm::GradeTooLowException();
 

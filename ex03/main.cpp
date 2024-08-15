@@ -1,46 +1,40 @@
- /* ************************************************************************** */
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahajji <ahajji@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/17 13:30:53 by ahajji            #+#    #+#             */
-/*   Updated: 2024/01/27 00:37:48 by ahajji           ###   ########.fr       */
+/*   Created: 2023/09/13 15:36:45 by agimi             #+#    #+#             */
+/*   Updated: 2024/08/15 20:00:00 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Bureaucrat.hpp"
-#include "ShrubberyCreationForm.hpp"
 #include "Intern.hpp"
 
 int main(void)
 {
-    
-Intern intern;
+	Bureaucrat	ay("karim", 50);
+	Intern		internet;
+	Form		*_form;
 
-    Form* form1 = intern.makeForm("PresidentialPardonForm", "Target1");
-    if (form1 != NULL) {
-        delete form1;
-    }
+	// check dirved calsses forms are created execpt for the last one
 
-    Form* form2 = intern.makeForm("RobotomyRequestForm", "Target2");
-    if (form2 != NULL) {
-        
-        delete form2;
-    }
+	try
+	{
+		_form = internet.makeForm("robotomy request", "Alice");
+		delete _form;
+		_form = internet.makeForm("shrubbery creation", "Quentin");
+		delete _form;
+		_form = internet.makeForm("presidential pardon", "Eliot");
+		delete _form;
+		_form = internet.makeForm("random request", "Julia");
+		delete _form;
+	}
+	catch (std::exception &e)
+	{
+		std::cout << "Caught exception: " << e.what() << std::endl;
+	}
 
-    Form* form3 = intern.makeForm("ShrubberyCreationForm", "Target3");
-    if (form3 != NULL) {
-        
-        delete form3;
-    }
-
-    Form* form4 = intern.makeForm("nonexistentform", "Target4");
-    if (form4 != NULL) {
-        delete form4;
-    }
-
-    return 0;
+	return	(0);
 }
