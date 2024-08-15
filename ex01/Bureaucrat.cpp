@@ -6,13 +6,13 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:17:11 by ahajji            #+#    #+#             */
-/*   Updated: 2024/08/12 14:27:10 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/08/15 13:15:07 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat(std::string name, int grade)
+Bureaucrat::Bureaucrat(std::string name, int grade) : name(name)
 {
     if(grade > 150) 
         throw GradeTooLowException();
@@ -27,12 +27,12 @@ Bureaucrat::~Bureaucrat()
     
 }
 
-const std::string Bureaucrat::getName() const
+std::string Bureaucrat::getName() const
 {
     return this->name;
 }
 
-const int Bureaucrat::getGrade() const
+int Bureaucrat::getGrade() const
 {
     return this->grade;
 }
